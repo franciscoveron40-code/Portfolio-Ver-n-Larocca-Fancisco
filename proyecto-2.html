@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Enciclopedia del Amor Digital — Proyecto editorial y tipográfico que explora las nuevas formas de vincularse y amar en la virtualidad."
+  >
+
+  <meta name="theme-color" content="#000000">
+
+  <title>Enciclopedia del Amor Digital — Francisco Verón Larocca</title>
+
+  <link rel="stylesheet" href="styles1.css">
+
+  <style>
+    /* PROTOTIPO FIGMA — estilos incluidos en este HTML para asegurar visibilidad */
+    .figma-prototype-section {
+      width: 100%;
+      padding: clamp(90px, 10vw, 160px) var(--pad, 32px);
+      border-top: 1px solid rgba(255,255,255,.14);
+      background: #050505;
+      color: #fff;
+    }
+
+    .figma-prototype-header {
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto clamp(36px, 5vw, 70px);
+    }
+
+    .figma-prototype-header h2 {
+      max-width: 1100px;
+      margin: 18px 0 0;
+      font-size: clamp(3rem, 6vw, 6.5rem);
+      font-weight: 500;
+      line-height: .92;
+      letter-spacing: -.055em;
+    }
+
+    .figma-prototype-header p {
+      max-width: 620px;
+      margin: 28px 0 0;
+      color: rgba(255,255,255,.62);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .figma-prototype {
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+      aspect-ratio: 16 / 9;
+      min-height: 520px;
+      background: #111;
+      border: 1px solid rgba(255,255,255,.16);
+      overflow: hidden;
+    }
+
+    .figma-prototype iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      border: 0;
+      background: #111;
+    }
+
+    .figma-prototype-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1600px;
+      margin: 18px auto 0;
+      padding: 16px 0;
+      border-bottom: 1px solid rgba(255,255,255,.22);
+      color: rgba(255,255,255,.78);
+    }
+
+    @media (max-width: 700px) {
+      .figma-prototype-section {
+        padding: 72px 18px;
+      }
+
+      .figma-prototype {
+        aspect-ratio: auto;
+        min-height: 70vh;
+      }
+
+      .figma-prototype iframe {
+        min-height: 70vh;
+      }
+
+      .figma-prototype-header h2 {
+        font-size: clamp(2.8rem, 13vw, 4.5rem);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="Francisco Verón Larocca — Volver al inicio"
+    >
+      Francisco Verón Larocca
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="menu"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+  </header>
+
+
+  <!-- MENU -->
+  <nav class="menu" id="menu" aria-hidden="true">
+
+    <a href="index.html#inicio">
+      Inicio
+    </a>
+
+    <a href="index.html#arte">
+      Nuestro arte
+    </a>
+
+    <a href="index.html#about">
+      About me
+    </a>
+
+    <a href="index.html#contacto">
+      Contacto
+    </a>
+
+  </nav>
+
+
+  <!-- MAIN -->
+  <main
+    class="project-page"
+    id="contenido"
+  >
+
+
+    <!-- HERO SIN IMAGEN -->
+    <section
+      class="project-hero project-hero--text"
+      aria-labelledby="project-title"
+    >
+
+      <div class="project-hero-content">
+
+        <span class="project-number">
+          Proyecto 02
+        </span>
+
+        <h1 id="project-title">
+          Enciclopedia<br>del Amor Digital
+        </h1>
+
+        <div class="project-hero-meta">
+
+          <span>
+            Diseño editorial
+          </span>
+
+          <span>
+            Tipografía
+          </span>
+
+          <span>
+            2025
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE EL PROYECTO -->
+    <section class="project-intro">
+
+      <div class="project-intro-heading">
+
+        <span class="section-label">
+          Sobre el proyecto
+        </span>
+
+        <h2>
+          Una enciclopedia que explora cómo el amor,
+          los vínculos y sus códigos se transforman
+          dentro del universo digital.
+        </h2>
+
+      </div>
+
+
+      <div class="project-intro-info">
+
+        <dl class="project-details">
+
+          <div>
+            <dt>Proyecto</dt>
+            <dd>Enciclopedia del Amor Digital</dd>
+          </div>
+
+          <div>
+            <dt>Disciplina</dt>
+            <dd>Diseño editorial · Tipografía</dd>
+          </div>
+
+          <div>
+            <dt>Aplicaciones</dt>
+            <dd>Editorial · Digital · UX/UI</dd>
+          </div>
+
+          <div>
+            <dt>Contexto</dt>
+            <dd>TYPE · Proyecto académico</dd>
+          </div>
+
+          <div>
+            <dt>Modalidad</dt>
+            <dd>Proyecto grupal</dd>
+          </div>
+
+          <div>
+            <dt>Año</dt>
+            <dd>2025</dd>
+          </div>
+
+        </dl>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONCEPTO -->
+    <section class="project-text-section">
+
+      <div class="project-text-label">
+
+        <span class="section-label">
+          Concepto
+        </span>
+
+      </div>
+
+
+      <div class="project-text-content">
+
+        <p class="project-lead">
+          ¿Cómo cambia el amor cuando gran parte de nuestros vínculos
+          comienzan, se construyen y terminan a través de una pantalla?
+        </p>
+
+
+        <div class="project-text-columns">
+
+          <p>
+            La Enciclopedia del Amor Digital toma el amor romántico
+            como punto de partida para investigar las nuevas dinámicas
+            que aparecen dentro de la virtualidad y los códigos propios
+            de las relaciones contemporáneas.
+          </p>
+
+          <p>
+            El proyecto traduce ese universo a un sistema editorial
+            y tipográfico capaz de organizar distintos contenidos,
+            conceptos y comportamientos dentro de una misma identidad
+            visual, extendiéndose también hacia soportes digitales.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GALERÍA -->
+    <section
+      class="project-gallery"
+      aria-label="Galería de Enciclopedia del Amor Digital"
+    >
+
+
+      <!-- IMAGEN GRANDE -->
+      <figure class="project-image project-image-full">
+
+        <img
+          src="P2/GRANDE 1.png"
+          alt=""
+          loading="lazy"
+        >
+
+      </figure>
+
+
+      <!-- DOS IMÁGENES -->
+      <div class="project-gallery-grid">
+
+        <figure class="project-image">
+
+          <img
+            src="P2/MEDIO 2.png"
+            alt=""
+            loading="lazy"
+          >
+
+        </figure>
+
+
+        <figure class="project-image">
+
+          <img
+            src="P2/MEDIO 1.png"
+            alt=""
+            loading="lazy"
+          >
+
+        </figure>
+
+      </div>
+
+
+      <!-- IMAGEN GRANDE -->
+      <figure class="project-image project-image-full">
+
+        <img
+          src="P2/G3 RL.png"
+          alt=""
+          loading="lazy"
+        >
+
+      </figure>
+
+
+      <!-- DOS IMÁGENES -->
+      <div class="project-gallery-grid">
+
+        <figure class="project-image">
+
+          <img
+            src="P2/M3.png"
+            alt=""
+            loading="lazy"
+          >
+
+        </figure>
+
+
+        <figure class="project-image">
+
+          <img
+            src="P2/M4.png"
+            alt=""
+            loading="lazy"
+          >
+
+        </figure>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- PROTOTIPO FIGMA -->
+    <section
+      class="figma-prototype-section"
+      aria-labelledby="prototype-title"
+    >
+
+      <div class="figma-prototype-header">
+
+        <span class="section-label">
+          Experiencia digital
+        </span>
+
+        <h2 id="prototype-title">
+          Explorá la Enciclopedia<br>
+          del Amor Digital.
+        </h2>
+
+        <p>
+          Navegá el prototipo interactivo y descubrí cómo
+          el sistema editorial se traslada al entorno digital.
+        </p>
+
+      </div>
+
+
+      <div class="figma-prototype">
+
+        <iframe
+          src="https://embed.figma.com/proto/w2GmYAOB8n6PAVYqWoVnQt/enciclopedia-del-amor-rom%C3%A1ntico?content-scaling=fixed&amp;kind=proto&amp;node-id=2726-4175&amp;page-id=518%3A1394&amp;scaling=scale-down&amp;starting-point-node-id=2726%3A4175&amp;t=vu0yABElstxQJvHR-1&amp;embed-host=share"
+          title="Prototipo interactivo de Enciclopedia del Amor Digital"
+          width="1600"
+          height="900"
+          allow="fullscreen"
+          allowfullscreen
+        ></iframe>
+
+      </div>
+
+
+      <a
+        href="https://www.figma.com/proto/w2GmYAOB8n6PAVYqWoVnQt/enciclopedia-del-amor-rom%C3%A1ntico?content-scaling=fixed&kind=proto&node-id=2726-4175&page-id=518%3A1394&scaling=scale-down&starting-point-node-id=2726%3A4175&t=vu0yABElstxQJvHR-1"
+        class="figma-prototype-link"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Abrir prototipo en Figma
+        <span>↗</span>
+      </a>
+
+    </section>
+
+
+    <!-- RESULTADO -->
+    <section class="project-result">
+
+      <span class="section-label">
+        Resultado
+      </span>
+
+      <p>
+        Un sistema editorial y digital que convierte un fenómeno
+        cotidiano e intangible —el amor atravesado por la tecnología—
+        en una experiencia visual organizada, dinámica y contemporánea.
+      </p>
+
+    </section>
+
+
+    <!-- CRÉDITOS -->
+    <section
+      class="project-credits"
+      aria-label="Créditos de Enciclopedia del Amor Digital"
+    >
+
+      <div>
+        <span>Proyecto</span>
+        <p>Enciclopedia del Amor Digital</p>
+      </div>
+
+      <div>
+        <span>Participación</span>
+        <p>Francisco Verón Larocca</p>
+        <p>Lujan Oddone</p>
+        <p>Clara Laguna</p>
+        <p>Franco Garay</p>
+        <p>Lucia Ricci</p>
+      </div>
+
+      <div>
+        <span>Modalidad</span>
+        <p>Proyecto grupal</p>
+      </div>
+
+      <div>
+        <span>Área</span>
+        <p>Editorial · Tipografía · Digital</p>
+      </div>
+
+      <div>
+        <span>Materia</span>
+        <p>TYPE</p>
+      </div>
+
+      <div>
+        <span>Año</span>
+        <p>2025</p>
+      </div>
+
+    </section>
+
+
+    <!-- NAVEGACIÓN -->
+    <nav
+      class="project-navigation"
+      aria-label="Navegación entre proyectos"
+    >
+
+      <a
+        href="index.html#arte"
+        class="back-projects"
+      >
+        <span aria-hidden="true">
+          ←
+        </span>
+
+        Todos los proyectos
+      </a>
+
+
+      <a
+        href="proyecto-3.html"
+        class="next-project"
+      >
+
+        <span class="next-project-label">
+          Siguiente proyecto
+        </span>
+
+        <div class="next-project-main">
+
+          <h2>
+            Proyecto 03
+          </h2>
+
+          <span
+            class="next-project-arrow"
+            aria-hidden="true"
+          >
+            →
+          </span>
+
+        </div>
+
+      </a>
+
+    </nav>
+
+  </main>
+
+
+  <!-- =====================================================
+       BOTÓN FLOTANTE WHATSAPP
+  ====================================================== -->
+
+  <a
+    href="https://wa.me/5491123137663?text=Hola%20Francisco,%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20consultarte%20por%20un%20proyecto."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar a Francisco por WhatsApp"
+  >
+
+    <svg
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+    >
+
+      <path
+        fill="currentColor"
+        d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.55.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.29.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.32z"
+      />
+
+      <path
+        fill="currentColor"
+        d="M16.03 3C8.84 3 3 8.83 3 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.03 29C23.2 29 29 23.17 29 16S23.2 3 16.03 3zm0 23.81a10.8 10.8 0 0 1-5.5-1.5l-.39-.23-3.96 1.04 1.06-3.86-.25-.4A10.78 10.78 0 0 1 5.18 16c0-5.97 4.86-10.82 10.85-10.82 5.98 0 10.79 4.85 10.79 10.82s-4.81 10.81-10.79 10.81z"
+      />
+
+    </svg>
+
+    <span>
+      WhatsApp
+    </span>
+
+  </a>
+
+
+  <!-- FOOTER -->
+  <footer class="project-footer">
+
+    <div class="project-footer-left">
+
+      <a href="index.html">
+        Francisco Verón Larocca
+      </a>
+
+      <span>
+        Diseño gráfico · Dirección de arte
+      </span>
+
+    </div>
+
+
+    <div class="project-footer-center">
+
+      <span>
+        ¿Tenés un proyecto?
+      </span>
+
+      <a href="mailto:hola@jf-studio.com">
+        Escribime ↗
+      </a>
+
+    </div>
+
+
+    <div class="project-footer-right">
+
+      <span>
+        Buenos Aires, Argentina
+      </span>
+
+      <span>
+        © <span id="year"></span> Francisco Verón Larocca
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="app.js"></script>
+
+</body>
+
+</html>

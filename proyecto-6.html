@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="CtrlZ — Proyecto de identidad audiovisual para un streaming de FADU compuesto por tres programas."
+  >
+
+  <meta name="theme-color" content="#000000">
+
+  <title>CtrlZ — Francisco Verón Larocca</title>
+
+  <link rel="stylesheet" href="styles1.css">
+
+  <style>
+    /* =========================================================
+       PROYECTO 06 — CTRLZ
+       Estilos específicos de esta página
+    ========================================================= */
+
+    .ctrlz-intro {
+      padding-bottom: clamp(70px, 8vw, 120px);
+    }
+
+    /* DOS IMÁGENES MEDIANAS */
+    .ctrlz-images {
+      width: 100%;
+      padding:
+        0
+        var(--pad)
+        clamp(80px, 10vw, 150px);
+    }
+
+    .ctrlz-images-grid {
+      width: 100%;
+      max-width: 1500px;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(10px, 1vw, 18px);
+    }
+
+    .ctrlz-image {
+      margin: 0;
+      overflow: hidden;
+      background: #111;
+    }
+
+    .ctrlz-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    /* VIDEO */
+    .ctrlz-video-section {
+      width: 100%;
+
+      padding:
+        0
+        var(--pad)
+        clamp(120px, 14vw, 220px);
+    }
+
+    .ctrlz-video-wrap {
+      position: relative;
+
+      width: min(100%, 1500px);
+      margin: 0 auto;
+
+      overflow: hidden;
+      background: #050505;
+
+      cursor: pointer;
+      isolation: isolate;
+    }
+
+    .ctrlz-video {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      aspect-ratio: 16 / 9;
+
+      object-fit: contain;
+      background: #050505;
+    }
+
+    .ctrlz-video-overlay {
+      position: absolute;
+      inset: 0;
+
+      z-index: 2;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      padding: 20px;
+
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent 60%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
+
+      opacity: 0;
+
+      transition:
+        opacity 300ms ease;
+    }
+
+    .ctrlz-video-wrap:hover .ctrlz-video-overlay,
+    .ctrlz-video-wrap:focus-visible .ctrlz-video-overlay {
+      opacity: 1;
+    }
+
+    .ctrlz-fullscreen-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding:
+        10px
+        14px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.55);
+
+      background:
+        rgba(0, 0, 0, 0.45);
+
+      color: #fff;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .ctrlz-video-wrap:focus-visible {
+      outline: 1px solid #fff;
+      outline-offset: 6px;
+    }
+
+    /* VIDEO EN FULLSCREEN */
+    .ctrlz-video:fullscreen,
+    .ctrlz-video:-webkit-full-screen {
+      width: 100vw;
+      height: 100vh;
+
+      object-fit: contain;
+      background: #000;
+    }
+
+    @media (max-width: 800px) {
+
+      .ctrlz-images-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ctrlz-image img {
+        aspect-ratio: 16 / 11;
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .ctrlz-images,
+      .ctrlz-video-section {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .ctrlz-images {
+        padding-bottom: 70px;
+      }
+
+      .ctrlz-video-section {
+        padding-bottom: 90px;
+      }
+
+      .ctrlz-video-overlay {
+        opacity: 1;
+        padding: 12px;
+      }
+
+      .ctrlz-fullscreen-label {
+        padding:
+          8px
+          11px;
+
+        font-size: 0.68rem;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="Francisco Verón Larocca — Volver al inicio"
+    >
+      Francisco Verón Larocca
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="menu"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+  </header>
+
+
+  <!-- MENU -->
+  <nav
+    class="menu"
+    id="menu"
+    aria-hidden="true"
+  >
+
+    <a href="#inicio">
+      Inicio
+    </a>
+
+    <a href="#arte">
+      Nuestro arte
+    </a>
+
+    <a href="About.html">
+      About me
+    </a>
+
+    <a href="#contacto">
+      Contacto
+    </a>
+
+  </nav>
+
+
+  <!-- MAIN -->
+  <main
+    class="project-page"
+    id="contenido"
+  >
+
+
+    <!-- HERO -->
+    <section
+      class="project-hero project-hero--text"
+      aria-labelledby="project-title"
+    >
+
+      <div class="project-hero-content">
+
+        <span class="project-number">
+          Proyecto 06
+        </span>
+
+        <h1 id="project-title">
+          CtrlZ
+        </h1>
+
+        <div class="project-hero-meta">
+
+          <span>
+            Identidad audiovisual
+          </span>
+
+          <span>
+            Streaming · FADU
+          </span>
+
+          <span>
+            2026
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE EL PROYECTO -->
+    <section class="project-intro ctrlz-intro">
+
+      <div class="project-intro-heading">
+
+        <span class="section-label">
+          Sobre el proyecto
+        </span>
+
+        <h2>
+          Una identidad audiovisual para CtrlZ,
+          un streaming de FADU compuesto por
+          tres programas con una misma lógica visual.
+        </h2>
+
+      </div>
+
+
+      <div class="project-intro-info">
+
+        <dl class="project-details">
+
+          <div>
+            <dt>Proyecto</dt>
+            <dd>CtrlZ</dd>
+          </div>
+
+          <div>
+            <dt>Formato</dt>
+            <dd>Streaming</dd>
+          </div>
+
+          <div>
+            <dt>Contexto</dt>
+            <dd>FADU</dd>
+          </div>
+
+          <div>
+            <dt>Programas</dt>
+            <dd>3</dd>
+          </div>
+
+          <div>
+            <dt>Disciplina</dt>
+            <dd>Identidad visual · Motion</dd>
+          </div>
+
+          <div>
+            <dt>Año</dt>
+            <dd>2026</dd>
+          </div>
+
+        </dl>
+
+      </div>
+
+    </section>
+
+
+    <!-- DOS IMÁGENES MEDIANAS -->
+    <section
+      class="ctrlz-images"
+      aria-label="Piezas visuales del proyecto CtrlZ"
+    >
+
+      <div class="ctrlz-images-grid">
+
+        <figure class="ctrlz-image">
+
+          <img
+            src="p6/m1@4x.png"
+            alt="Aplicación visual del streaming CtrlZ"
+            loading="lazy"
+          >
+
+        </figure>
+
+
+        <figure class="ctrlz-image">
+
+          <img
+            src="p6/m2@4x.png"
+            alt="Sistema visual de uno de los programas de CtrlZ"
+            loading="lazy"
+          >
+
+        </figure>
+
+      </div>
+
+    </section>
+
+
+    <!-- VIDEO -->
+    <section
+      class="ctrlz-video-section"
+      aria-label="Video de identidad audiovisual de CtrlZ"
+    >
+
+      <div
+        class="ctrlz-video-wrap"
+        id="ctrlz-video-trigger"
+        role="button"
+        tabindex="0"
+        aria-label="Ver video de CtrlZ en pantalla completa con sonido"
+      >
+
+        <video
+          class="ctrlz-video"
+          id="ctrlz-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-label="Video de identidad audiovisual del streaming CtrlZ"
+        >
+          <source
+            src="p6/final....mp4"
+            type="video/mp4"
+          >
+
+          Tu navegador no puede reproducir este video.
+        </video>
+
+
+        <div
+          class="ctrlz-video-overlay"
+          aria-hidden="true"
+        >
+
+          <span class="ctrlz-fullscreen-label">
+            Ver en pantalla completa · sonido
+            <span>↗</span>
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NAVEGACIÓN -->
+    <nav
+      class="project-navigation"
+      aria-label="Navegación entre proyectos"
+    >
+
+      <a
+        href="index.html#arte"
+        class="back-projects"
+      >
+        <span aria-hidden="true">
+          ←
+        </span>
+
+        Todos los proyectos
+      </a>
+
+
+      <a
+        href="proyecto-1.html"
+        class="next-project"
+      >
+
+        <span class="next-project-label">
+          Volver al primer proyecto
+        </span>
+
+        <div class="next-project-main">
+
+          <h2>
+            Proyecto 01
+          </h2>
+
+          <span
+            class="next-project-arrow"
+            aria-hidden="true"
+          >
+            →
+          </span>
+
+        </div>
+
+      </a>
+
+    </nav>
+
+  </main>
+
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/5491123137663?text=Hola%20Francisco,%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20consultarte%20por%20un%20proyecto."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar a Francisco por WhatsApp"
+  >
+
+    <svg
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+    >
+
+      <path
+        fill="currentColor"
+        d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.55.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.29.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.32z"
+      />
+
+      <path
+        fill="currentColor"
+        d="M16.03 3C8.84 3 3 8.83 3 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.03 29C23.2 29 29 23.17 29 16S23.2 3 16.03 3zm0 23.81a10.8 10.8 0 0 1-5.5-1.5l-.39-.23-3.96 1.04 1.06-3.86-.25-.4A10.78 10.78 0 0 1 5.18 16c0-5.97 4.86-10.82 10.85-10.82 5.98 0 10.79 4.85 10.79 10.82s-4.81 10.81-10.79 10.81z"
+      />
+
+    </svg>
+
+    <span>
+      WhatsApp
+    </span>
+
+  </a>
+
+
+  <!-- FOOTER -->
+  <footer class="project-footer">
+
+    <div class="project-footer-left">
+
+      <a href="index.html">
+        Francisco Verón Larocca
+      </a>
+
+      <span>
+        Diseño gráfico · Dirección de arte
+      </span>
+
+    </div>
+
+
+    <div class="project-footer-center">
+
+      <span>
+        ¿Tenés un proyecto?
+      </span>
+
+      <a href="mailto:hola@jf-studio.com">
+        Escribime ↗
+      </a>
+
+    </div>
+
+
+    <div class="project-footer-right">
+
+      <span>
+        Buenos Aires, Argentina
+      </span>
+
+      <span>
+        © <span id="year"></span> Francisco Verón Larocca
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="app.js"></script>
+
+  <script>
+    const ctrlzVideo = document.getElementById('ctrlz-video');
+    const ctrlzTrigger = document.getElementById('ctrlz-video-trigger');
+
+    function openCtrlZFullscreen() {
+      if (!ctrlzVideo) return;
+
+      /* Al tocarlo se activa el sonido */
+      ctrlzVideo.muted = false;
+      ctrlzVideo.volume = 1;
+
+      ctrlzVideo.play().catch(() => {});
+
+      /* iPhone / Safari */
+      if (typeof ctrlzVideo.webkitEnterFullscreen === 'function') {
+        ctrlzVideo.webkitEnterFullscreen();
+        return;
+      }
+
+      /* Navegadores modernos */
+      if (ctrlzVideo.requestFullscreen) {
+        ctrlzVideo.requestFullscreen();
+        return;
+      }
+
+      /* Safari desktop antiguo */
+      if (ctrlzVideo.webkitRequestFullscreen) {
+        ctrlzVideo.webkitRequestFullscreen();
+      }
+    }
+
+    function returnToMutedLoop() {
+      const isFullscreen =
+        document.fullscreenElement ||
+        document.webkitFullscreenElement;
+
+      if (!isFullscreen && ctrlzVideo) {
+        ctrlzVideo.muted = true;
+        ctrlzVideo.play().catch(() => {});
+      }
+    }
+
+    if (ctrlzTrigger) {
+
+      ctrlzTrigger.addEventListener(
+        'click',
+        openCtrlZFullscreen
+      );
+
+      ctrlzTrigger.addEventListener(
+        'keydown',
+        (event) => {
+
+          if (
+            event.key === 'Enter' ||
+            event.key === ' '
+          ) {
+            event.preventDefault();
+            openCtrlZFullscreen();
+          }
+
+        }
+      );
+
+    }
+
+    document.addEventListener(
+      'fullscreenchange',
+      returnToMutedLoop
+    );
+
+    document.addEventListener(
+      'webkitfullscreenchange',
+      returnToMutedLoop
+    );
+
+    /* Al salir del reproductor nativo de iPhone vuelve a mute */
+    if (ctrlzVideo) {
+      ctrlzVideo.addEventListener(
+        'webkitendfullscreen',
+        () => {
+          ctrlzVideo.muted = true;
+          ctrlzVideo.play().catch(() => {});
+        }
+      );
+    }
+  </script>
+
+</body>
+
+</html>

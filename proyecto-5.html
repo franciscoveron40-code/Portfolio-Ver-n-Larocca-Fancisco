@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Saira — Proyecto de motion typography y espécimen tipográfico audiovisual realizado por Francisco Verón Larocca."
+  >
+
+  <meta name="theme-color" content="#000000">
+
+  <title>Saira — Francisco Verón Larocca</title>
+
+  <link rel="stylesheet" href="styles1.css">
+
+  <style>
+    /* =========================================================
+       PROYECTO 05 — SAIRA
+       Video vertical + fullscreen al tocar
+    ========================================================= */
+
+    .motion-intro {
+      padding-bottom: clamp(80px, 9vw, 140px);
+    }
+
+    .motion-video-section {
+      width: 100%;
+      padding:
+        0
+        var(--pad)
+        clamp(120px, 14vw, 220px);
+    }
+
+    .motion-video-wrap {
+      position: relative;
+
+      width: min(100%, 760px);
+      margin: 0 auto;
+
+      background: #050505;
+      overflow: hidden;
+
+      cursor: pointer;
+      isolation: isolate;
+    }
+
+    .motion-video {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      aspect-ratio: 9 / 16;
+
+      object-fit: contain;
+
+      background: #050505;
+    }
+
+    .motion-video-overlay {
+      position: absolute;
+      inset: 0;
+
+      z-index: 2;
+
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      padding: 18px;
+
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          180deg,
+          transparent 65%,
+          rgba(0, 0, 0, 0.45) 100%
+        );
+
+      opacity: 0;
+
+      transition:
+        opacity 300ms ease;
+    }
+
+    .motion-video-wrap:hover .motion-video-overlay,
+    .motion-video-wrap:focus-visible .motion-video-overlay {
+      opacity: 1;
+    }
+
+    .motion-fullscreen-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding:
+        10px
+        14px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.55);
+
+      background:
+        rgba(0, 0, 0, 0.42);
+
+      color: #fff;
+
+      font-size: 0.75rem;
+      font-weight: 500;
+
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .motion-video-wrap:focus-visible {
+      outline: 1px solid #fff;
+      outline-offset: 6px;
+    }
+
+    /* Pantalla completa */
+    .motion-video:fullscreen,
+    .motion-video:-webkit-full-screen {
+      width: 100vw;
+      height: 100vh;
+
+      object-fit: contain;
+
+      background: #000;
+    }
+
+    @media (max-width: 600px) {
+
+      .motion-video-section {
+        padding:
+          0
+          18px
+          90px;
+      }
+
+      .motion-video-wrap {
+        width: min(100%, 520px);
+      }
+
+      .motion-video-overlay {
+        opacity: 1;
+
+        padding: 12px;
+      }
+
+      .motion-fullscreen-label {
+        padding:
+          8px
+          11px;
+
+        font-size: 0.68rem;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+
+    <a
+      href="index.html"
+      class="brand"
+      aria-label="Francisco Verón Larocca — Volver al inicio"
+    >
+      Francisco Verón Larocca
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menú"
+      aria-expanded="false"
+      aria-controls="menu"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+  </header>
+
+
+  <!-- MENU -->
+  <nav class="menu" id="menu" aria-hidden="true">
+    <a href="index.html#inicio">Inicio</a>
+    <a href="index.html#arte">Nuestro arte</a>
+    <a href="index.html#about">About me</a>
+    <a href="index.html#contacto">Contacto</a>
+  </nav>
+
+
+  <!-- MAIN -->
+  <main
+    class="project-page"
+    id="contenido"
+  >
+
+
+    <!-- HERO -->
+    <section
+      class="project-hero project-hero--text"
+      aria-labelledby="project-title"
+    >
+
+      <div class="project-hero-content">
+
+        <span class="project-number">
+          Proyecto 05
+        </span>
+
+        <h1 id="project-title">
+          Saira
+        </h1>
+
+        <div class="project-hero-meta">
+
+          <span>
+            Motion typography
+          </span>
+
+          <span>
+            Espécimen tipográfico
+          </span>
+
+          <span>
+            2024
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SOBRE EL PROYECTO -->
+    <section class="project-intro motion-intro">
+
+      <div class="project-intro-heading">
+
+        <span class="section-label">
+          Sobre el proyecto
+        </span>
+
+        <h2>
+          Un espécimen audiovisual que explora
+          el ritmo, la escala y el carácter de Saira
+          a través del movimiento.
+        </h2>
+
+      </div>
+
+
+      <div class="project-intro-info">
+
+        <dl class="project-details">
+
+          <div>
+            <dt>Proyecto</dt>
+            <dd>Saira</dd>
+          </div>
+
+          <div>
+            <dt>Disciplina</dt>
+            <dd>Motion typography</dd>
+          </div>
+
+          <div>
+            <dt>Tipografía</dt>
+            <dd>Saira · Héctor Gatti</dd>
+          </div>
+
+          <div>
+            <dt>Video</dt>
+            <dd>Francisco Verón Larocca</dd>
+          </div>
+
+          <div>
+            <dt>Comisión</dt>
+            <dd>Chino y Flor</dd>
+          </div>
+
+          <div>
+            <dt>Año</dt>
+            <dd>2024</dd>
+          </div>
+
+        </dl>
+
+      </div>
+
+    </section>
+
+
+    <!-- VIDEO -->
+    <section
+      class="motion-video-section"
+      aria-label="Video del proyecto Saira"
+    >
+
+      <div
+        class="motion-video-wrap"
+        id="motion-video-trigger"
+        role="button"
+        tabindex="0"
+        aria-label="Reproducir Saira en pantalla completa"
+      >
+
+        <video
+          class="motion-video"
+          id="motion-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-label="Espécimen tipográfico animado de Saira"
+        >
+          <source
+            src="p5/tp4-Chino-y-Flor-Francisco-Veron-Larocca.mp4"
+            type="video/mp4"
+          >
+
+          Tu navegador no puede reproducir este video.
+        </video>
+
+        <div class="motion-video-overlay" aria-hidden="true">
+          <span class="motion-fullscreen-label">
+            Ver en pantalla completa
+            <span>↗</span>
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- NAVEGACIÓN -->
+    <nav
+      class="project-navigation"
+      aria-label="Navegación entre proyectos"
+    >
+
+      <a
+        href="index.html#arte"
+        class="back-projects"
+      >
+        <span aria-hidden="true">←</span>
+        Todos los proyectos
+      </a>
+
+
+      <a
+        href="proyecto-6.html"
+        class="next-project"
+      >
+
+        <span class="next-project-label">
+          Siguiente proyecto
+        </span>
+
+        <div class="next-project-main">
+
+          <h2>
+            Proyecto 06
+          </h2>
+
+          <span
+            class="next-project-arrow"
+            aria-hidden="true"
+          >
+            →
+          </span>
+
+        </div>
+
+      </a>
+
+    </nav>
+
+  </main>
+
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/5491123137663?text=Hola%20Francisco,%20vi%20tu%20portfolio%20y%20me%20gustar%C3%ADa%20consultarte%20por%20un%20proyecto."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar a Francisco por WhatsApp"
+  >
+
+    <svg
+      viewBox="0 0 32 32"
+      aria-hidden="true"
+    >
+
+      <path
+        fill="currentColor"
+        d="M19.11 17.21c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.15-.42-2.19-1.35-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.55.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27 0 1.34.98 2.63 1.11 2.81.14.18 1.92 2.93 4.65 4.11.65.28 1.16.45 1.55.58.65.21 1.24.18 1.71.11.52-.08 1.6-.65 1.83-1.29.23-.63.23-1.18.16-1.29-.07-.11-.25-.18-.52-.32z"
+      />
+
+      <path
+        fill="currentColor"
+        d="M16.03 3C8.84 3 3 8.83 3 16c0 2.29.6 4.53 1.74 6.5L3 29l6.68-1.75A13 13 0 0 0 16.03 29C23.2 29 29 23.17 29 16S23.2 3 16.03 3zm0 23.81a10.8 10.8 0 0 1-5.5-1.5l-.39-.23-3.96 1.04 1.06-3.86-.25-.4A10.78 10.78 0 0 1 5.18 16c0-5.97 4.86-10.82 10.85-10.82 5.98 0 10.79 4.85 10.79 10.82s-4.81 10.81-10.79 10.81z"
+      />
+
+    </svg>
+
+    <span>
+      WhatsApp
+    </span>
+
+  </a>
+
+
+  <!-- FOOTER -->
+  <footer class="project-footer">
+
+    <div class="project-footer-left">
+
+      <a href="index.html">
+        Francisco Verón Larocca
+      </a>
+
+      <span>
+        Diseño gráfico · Dirección de arte
+      </span>
+
+    </div>
+
+
+    <div class="project-footer-center">
+
+      <span>
+        ¿Tenés un proyecto?
+      </span>
+
+      <a href="mailto:hola@jf-studio.com">
+        Escribime ↗
+      </a>
+
+    </div>
+
+
+    <div class="project-footer-right">
+
+      <span>
+        Buenos Aires, Argentina
+      </span>
+
+      <span>
+        © <span id="year"></span> Francisco Verón Larocca
+      </span>
+
+    </div>
+
+  </footer>
+
+
+  <script src="app.js"></script>
+
+  <script>
+    const motionVideo = document.getElementById('motion-video');
+    const motionTrigger = document.getElementById('motion-video-trigger');
+
+    function openVideoFullscreen() {
+      if (!motionVideo) return;
+
+      motionVideo.play().catch(() => {});
+
+      /* iPhone / Safari */
+      if (typeof motionVideo.webkitEnterFullscreen === 'function') {
+        motionVideo.webkitEnterFullscreen();
+        return;
+      }
+
+      /* Navegadores modernos */
+      if (motionVideo.requestFullscreen) {
+        motionVideo.requestFullscreen();
+        return;
+      }
+
+      /* Safari desktop antiguo */
+      if (motionVideo.webkitRequestFullscreen) {
+        motionVideo.webkitRequestFullscreen();
+      }
+    }
+
+    if (motionTrigger) {
+      motionTrigger.addEventListener('click', openVideoFullscreen);
+
+      motionTrigger.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openVideoFullscreen();
+        }
+      });
+    }
+  </script>
+
+</body>
+
+</html>
