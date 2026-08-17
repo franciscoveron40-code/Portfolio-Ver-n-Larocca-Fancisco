@@ -462,8 +462,8 @@ button {
 
   overflow: hidden;
 
-  background: var(--white);
-  color: var(--black);
+  background: #ff3b30;
+color: #ffffff;
 }
 
 .banner-track {
